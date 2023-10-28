@@ -2,7 +2,7 @@
 
   "parent": "item/generated",
   "textures": {
-    "laye0": "iconitems:item/minecraft_java"
+    "layer0": "iconitems:item/minecraft_java"
   }
 
 }

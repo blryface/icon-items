@@ -19,7 +19,7 @@ public class ModItems {
     public static final Item PRIDECRAFT = registerItem("pridecraft", new Item(new FabricItemSettings())); // pridecraft ITEM
     public static final Item CRSS = registerItem("crss", new Item(new FabricItemSettings())); // crss ITEM
     public static final Item DRSS = registerItem("drss", new Item(new FabricItemSettings())); // drss ITEM
-    // public static final Item tcf = registerItem("tcf", new Item(new FabricItemSettings())); // tcf ITEM
+    public static final Item tcf = registerItem("tcf", new Item(new FabricItemSettings())); // tcf ITEM
     public static final Item MINECRAFTJAVA = registerItem("minecraft_java", new Item(new FabricItemSettings())); // Java Minecraft ITEM
     public static final Item MINECRAFTBEDROCK = registerItem("minecraft_bedrock", new Item(new FabricItemSettings())); // Bedrock Minecraft ITEM
     public static final Item DEVINREAL = registerItem("devin", new Item(new FabricItemSettings())); // DEVIN ITEM
@@ -32,7 +32,7 @@ public class ModItems {
         entries.add(PRIDECRAFT);
         entries.add(CRSS);
         entries.add(DRSS);
-        // entries.add(tcf);
+        entries.add(tcf);
         entries.add(MINECRAFTJAVA);
         entries.add(MINECRAFTBEDROCK);
         entries.add(DEVINREAL);
@@ -42,12 +42,14 @@ public class ModItems {
     }
 
 
-    // thing that makes items register
+    // thing that makes items register + log thing
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Iconitems.MOD_ID, name), item);
     }
     public static void registerModItems() {
         Iconitems.LOGGER.info("Making items real :3");
+        Iconitems.LOGGER.info("By the way, if you ever wanted to make your Minecraft more gay");
+        Iconitems.LOGGER.info("Go download pridepack on https://pridecraft.gay/pridepack");
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);

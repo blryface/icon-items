@@ -5,7 +5,8 @@
 	"name": "Icon Items",
 	"description": "This mod adds various icons from various projects as items in-game. These include: CRSS, DRSS, Minecraft Bedrock Edition, CurseForge, Devin's pfp, GitHub's logo, Modrinth's logo, Minecraft Java Edition, Pridecraft's favicon logo, TheClashFruit's icon, and many more™",
 	"authors": [
-		"Blurryface"
+		"Blurryface",
+		"TheClashFruit"
 	],
 	"contact": {
 		"homepage": "https://blurryface.xyz/",

@@ -26,6 +26,7 @@ public class ModItems {
     public static final Item MAYAREAL = registerItem("maya", new Item(new FabricItemSettings())); // MAYA ITEM
     public static final Item GITHUB = registerItem("github", new Item(new FabricItemSettings())); //Github item
     public static final Item ICONITEMS = registerItem("iconitems", new Item(new FabricItemSettings())); //MOD ICON item
+    public static final Item JADE = registerItem("jade", new Item(new FabricItemSettings())); //Bribe to get approved in modrinth faster :troll:
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {  //makes the item appear on the Creative Inventory
 
         entries.add(MODRINTH);
@@ -40,6 +41,7 @@ public class ModItems {
         entries.add(MAYAREAL);
         entries.add(GITHUB);
         entries.add(ICONITEMS);
+        entries.add(JADE);
 
     }
 

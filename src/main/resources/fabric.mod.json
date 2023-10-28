@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "iconitems",
+	"version": "${version}",
+	"name": "iconitems",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/iconitems/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.blurryface.iconitems.Iconitems"
+		],
+		"client": [
+			"xyz.blurryface.iconitems.IconitemsClient"
+		]
+	},
+	"mixins": [
+		"iconitems.mixins.json",
+		{
+			"config": "iconitems.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

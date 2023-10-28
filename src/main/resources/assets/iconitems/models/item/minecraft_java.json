@@ -1,0 +1,8 @@
+{
+
+  "parent": "item/generated",
+  "textures": {
+    "laye0": "iconitems:item/minecraft_java"
+  }
+
+}

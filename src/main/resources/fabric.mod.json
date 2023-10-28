@@ -2,16 +2,16 @@
 	"schemaVersion": 1,
 	"id": "iconitems",
 	"version": "${version}",
-	"name": "iconitems",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Icon Items",
+	"description": "This mod adds various icons from various places as items in-game.",
 	"authors": [
-		"Me!"
+		"Blurryface"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://blurryface.xyz/",
+		"sources": "https://github.com/blryface/icon-items"
 	},
-	"license": "CC0-1.0",
+	"license": "CC BY-NC-SA 4.0",
 	"icon": "assets/iconitems/icon.png",
 	"environment": "*",
 	"entrypoints": {

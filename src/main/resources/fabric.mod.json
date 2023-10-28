@@ -8,6 +8,9 @@
 		"Blurryface",
 		"TheClashFruit"
 	],
+	"contributors": [
+		"TheClashFruit"
+	],
 	"contact": {
 		"homepage": "https://blurryface.xyz/",
 		"sources": "https://github.com/blryface/icon-items"
@@ -35,8 +38,5 @@
 		"minecraft": "~1.20.2",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

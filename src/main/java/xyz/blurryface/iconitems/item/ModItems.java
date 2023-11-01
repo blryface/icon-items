@@ -27,6 +27,16 @@ public class ModItems {
     public static final Item GITHUB = registerItem("github", new Item(new FabricItemSettings())); //Github item
     public static final Item ICONITEMS = registerItem("iconitems", new Item(new FabricItemSettings())); //MOD ICON item
     public static final Item JADE = registerItem("jade", new Item(new FabricItemSettings())); //Bribe to get approved in modrinth faster :troll:
+
+    //0.2 items
+
+    public static final Item PRISMLAUNCHER = registerItem("prismlauncher", new Item(new FabricItemSettings())); //prism logo item
+    public static final Item STEAM = registerItem("steam", new Item(new FabricItemSettings())); //Steam logo
+    public static final Item WHATSAPP = registerItem("whatsapp", new Item(new FabricItemSettings())); //Whatsapp logo
+    public static final Item WINDOWS11 = registerItem("windows11", new Item(new FabricItemSettings())); //win11 logo
+    public static final Item WINDOWS10 = registerItem("windows10", new Item(new FabricItemSettings())); //win10 logo
+    public static final Item LINUX = registerItem("linux", new Item(new FabricItemSettings())); //Tux
+    public static final Item MACOS = registerItem("macos", new Item(new FabricItemSettings())); //Latest macOS icon
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {  //makes the item appear on the Creative Inventory
 
         entries.add(MODRINTH);
@@ -43,6 +53,16 @@ public class ModItems {
         entries.add(ICONITEMS);
         entries.add(JADE);
 
+        //0.2 items
+
+        entries.add(PRISMLAUNCHER);
+        entries.add(STEAM);
+        entries.add(WHATSAPP);
+        entries.add(WINDOWS11);
+        entries.add(WINDOWS10);
+        entries.add(LINUX);
+        entries.add(MACOS);
+
     }
 
 
@@ -51,6 +71,9 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(Iconitems.MOD_ID, name), item);
     }
     public static void registerModItems() {
+
+        //Log messages and Ads
+
         Iconitems.LOGGER.info("Making items real :3");
         Iconitems.LOGGER.info("By the way, if you ever wanted to make your Minecraft more gay");
         Iconitems.LOGGER.info("Go download pridepack on https://pridecraft.gay/pridepack");

@@ -31,13 +31,20 @@ public class ModItems {
     //0.2 items
 
     public static final Item PRISMLAUNCHER = registerItem("prismlauncher", new Item(new FabricItemSettings())); //prism logo item
-    public static final Item STEAM = registerItem("steam", new Item(new FabricItemSettings())); //Steam logo
-    public static final Item WHATSAPP = registerItem("whatsapp", new Item(new FabricItemSettings())); //Whatsapp logo
-    public static final Item WINDOWS11 = registerItem("windows11", new Item(new FabricItemSettings())); //win11 logo
-    public static final Item WINDOWS10 = registerItem("windows10", new Item(new FabricItemSettings())); //win10 logo
-    public static final Item LINUX = registerItem("linux", new Item(new FabricItemSettings())); //Tux
-    public static final Item MACOS = registerItem("macos", new Item(new FabricItemSettings())); //Latest macOS icon
-    private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {  //makes the item appear on the Creative Inventory
+    public static final Item STEAM = registerItem("steam", new Item(new FabricItemSettings())); // Steam logo
+    public static final Item WHATSAPP = registerItem("whatsapp", new Item(new FabricItemSettings())); // Whatsapp logo
+    public static final Item WINDOWS11 = registerItem("windows11", new Item(new FabricItemSettings())); // win11 logo
+    public static final Item WINDOWS10 = registerItem("windows10", new Item(new FabricItemSettings())); // win10 logo
+    public static final Item LINUX = registerItem("linux", new Item(new FabricItemSettings())); // Tux
+    public static final Item MACOS = registerItem("macos", new Item(new FabricItemSettings())); // Latest macOS icon
+    public static final Item PFM = registerItem("pfm", new Item(new FabricItemSettings())); // Paladin's Furniture Mod icon
+    public static final Item X = registerItem("x", new Item(new FabricItemSettings())); // 𝕏
+    public static final Item TWITTER = registerItem("twitter", new Item(new FabricItemSettings())); // 𝕏 but good
+    public static final Item NYABOOM = registerItem("nyaboom", new Item(new FabricItemSettings())); // :33: emoji
+
+    //Make items appear on creative inventory
+
+    private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
 
         entries.add(MODRINTH);
         entries.add(CURSEFORGE);
@@ -62,6 +69,10 @@ public class ModItems {
         entries.add(WINDOWS10);
         entries.add(LINUX);
         entries.add(MACOS);
+        entries.add(PFM);
+        entries.add(X);
+        entries.add(TWITTER);
+        entries.add(NYABOOM);
 
     }
 
@@ -81,6 +92,8 @@ public class ModItems {
         Iconitems.LOGGER.info("Running into performance issues?");
         Iconitems.LOGGER.info("Try Devin's Additive today!");
         Iconitems.LOGGER.info("https://modrinth.com/modpack/additive");
+        //Iconitems.LOGGER.info("  ");
+        //Iconitems.LOGGER.info("Download PFM on <link>")
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);

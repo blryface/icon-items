@@ -45,6 +45,7 @@ public class ModItems {
     public static final Item IT_SUPPORT = registerItem("it_support", new Item(new FabricItemSettings()));
     public static final Item CAPITANSPARKLEZ = registerItem("CapitanSparklez", new Item(new FabricItemSettings()));
     public static final Item FELIXARGYLEWALLPAPERS_WALLPAPERCAVE = registerItem("felixargylewallpapers_wallpapercave", new Item(new FabricItemSettings()));
+    public static final Item FAKE_PNG = registerItem("fake_png", new Item(new FabricItemSettings()));
 
     // 10 message series
         //kuylar
@@ -67,6 +68,7 @@ public class ModItems {
         entries.add(IT_SUPPORT);
         entries.add(CAPITANSPARKLEZ);
         entries.add(FELIXARGYLEWALLPAPERS_WALLPAPERCAVE);
+        entries.add(FAKE_PNG);
         entries.add(KUYLAR_GAY_SEX);
         entries.add(KUYLAR_YOU_HAVE_TO_ADD_IT_NOW);
         entries.add(KUYLAR_NO);

@@ -37,7 +37,49 @@ public class ModItems {
     public static final Item WINDOWS10 = registerItem("windows10", new Item(new FabricItemSettings())); //win10 logo
     public static final Item LINUX = registerItem("linux", new Item(new FabricItemSettings())); //Tux
     public static final Item MACOS = registerItem("macos", new Item(new FabricItemSettings())); //Latest macOS icon
+
+
+    //modrinth staging items
+
+    public static final Item STUFF = registerItem("stuff", new Item(new FabricItemSettings()));
+    public static final Item IT_SUPPORT = registerItem("it_support", new Item(new FabricItemSettings()));
+    public static final Item CAPITANSPARKLEZ = registerItem("CapitanSparklez", new Item(new FabricItemSettings()));
+    public static final Item FELIXARGYLEWALLPAPERS_WALLPAPERCAVE = registerItem("felixargylewallpapers_wallpapercave", new Item(new FabricItemSettings()));
+
+    // 10 message series
+        //kuylar
+    public static final Item KUYLAR_GAY_SEX = registerItem("kuylar_gay_sex", new Item(new FabricItemSettings()));
+    public static final Item KUYLAR_YOU_HAVE_TO_ADD_IT_NOW = registerItem("kuylar_you_have_to_add_it_now", new Item(new FabricItemSettings()));
+    public static final Item KUYLAR_NO = registerItem("kuylar_no", new Item(new FabricItemSettings()));
+    public static final Item KIULAR_BOTH_OF_THEM = registerItem("kiular_both_of_them", new Item(new FabricItemSettings()));
+    public static final Item KUYLAR_WITH_THE_REPLY = registerItem("kuylar_with_the_reply", new Item(new FabricItemSettings()));
+    public static final Item FIVE_NIGHT_FREDDY = registerItem("five_night_freddy", new Item(new FabricItemSettings()));
+    public static final Item KUYLAR_ADD_THAT_TOO = registerItem("kuylar_add_that_too", new Item(new FabricItemSettings()));
+    public static final Item KUYLAR_YEAH_I_DO = registerItem("kuylar_yeah_i_do", new Item(new FabricItemSettings()));
+    public static final Item KUYLAR_AND_IM_GONNA_FINISH_IT_WITH = registerItem("kuylar_and_im_gonna_finish_it_with", new Item(new FabricItemSettings()));
+    public static final Item PLEADING_KUYLAR = registerItem("pleading_kuylar", new Item(new FabricItemSettings()));
+
+
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {  //makes the item appear on the Creative Inventory
+
+        // staging items
+
+        entries.add(STUFF);
+        entries.add(IT_SUPPORT);
+        entries.add(CAPITANSPARKLEZ);
+        entries.add(FELIXARGYLEWALLPAPERS_WALLPAPERCAVE);
+        entries.add(KUYLAR_GAY_SEX);
+        entries.add(KUYLAR_YOU_HAVE_TO_ADD_IT_NOW);
+        entries.add(KUYLAR_NO);
+        entries.add(KIULAR_BOTH_OF_THEM);
+        entries.add(KUYLAR_WITH_THE_REPLY);
+        entries.add(FIVE_NIGHT_FREDDY);
+        entries.add(KUYLAR_ADD_THAT_TOO);
+        entries.add(KUYLAR_YEAH_I_DO);
+        entries.add(KUYLAR_AND_IM_GONNA_FINISH_IT_WITH);
+        entries.add(PLEADING_KUYLAR);
+
+        // 0.1 items
 
         entries.add(MODRINTH);
         entries.add(CURSEFORGE);

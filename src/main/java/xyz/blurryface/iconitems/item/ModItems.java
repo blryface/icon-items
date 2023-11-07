@@ -57,7 +57,6 @@ public class ModItems {
     public static final Item KUYLAR_ADD_THAT_TOO = registerItem("kuylar_add_that_too", new Item(new FabricItemSettings()));
     public static final Item KUYLAR_YEAH_I_DO = registerItem("kuylar_yeah_i_do", new Item(new FabricItemSettings()));
     public static final Item KUYLAR_AND_IM_GONNA_FINISH_IT_WITH = registerItem("kuylar_and_im_gonna_finish_it_with", new Item(new FabricItemSettings()));
-    public static final Item PLEADING_KUYLAR = registerItem("pleading_kuylar", new Item(new FabricItemSettings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {  //makes the item appear on the Creative Inventory
@@ -77,7 +76,6 @@ public class ModItems {
         entries.add(KUYLAR_ADD_THAT_TOO);
         entries.add(KUYLAR_YEAH_I_DO);
         entries.add(KUYLAR_AND_IM_GONNA_FINISH_IT_WITH);
-        entries.add(PLEADING_KUYLAR);
 
         // 0.1 items
 

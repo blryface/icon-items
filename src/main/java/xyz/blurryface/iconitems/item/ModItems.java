@@ -50,7 +50,6 @@ public class ModItems {
     public static final Item LINUX = registerSimpleItem("linux", "Linux"); //Tux
     public static final Item ARCH_LINUX = registerSimpleItem("arch_linux", "Arch Linux");
     public static final Item UBUNTU = registerSimpleItem("ubuntu", "Ubuntu");
-    public static final Item MANJARO = registerSimpleItem("manjaro", "Manjaro");
     public static final Item GARUDA = registerSimpleItem("garuda", "Garuda");
     public static final Item ALPINE = registerSimpleItem("alpine", "Alpine Linux");
     //--- **LINUX** --- //

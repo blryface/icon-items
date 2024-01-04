@@ -50,7 +50,6 @@ public class ModItems {
     public static final Item LINUX = registerSimpleItem("linux", "Linux"); //Tux
     public static final Item ARCH_LINUX = registerSimpleItem("arch_linux", "Arch Linux");
     public static final Item UBUNTU = registerSimpleItem("ubuntu", "Ubuntu");
-    public static final Item MANJARO = registerSimpleItem("manjaro", "Manjaro");
     public static final Item GARUDA = registerSimpleItem("garuda", "Garuda");
     public static final Item ALPINE = registerSimpleItem("alpine", "Alpine Linux");
     //--- **LINUX** --- //
@@ -62,8 +61,8 @@ public class ModItems {
     }
 
     //For items that need no additional configuration
-    private static Item registerSimpleItem(String path, String engishName) {
-        return registerItem(path, engishName, new Item(new FabricItemSettings()));
+    private static Item registerSimpleItem(String path, String englishName) {
+        return registerItem(path, englishName, new Item(new FabricItemSettings()));
     }
 
     // thing that makes items register + log thing

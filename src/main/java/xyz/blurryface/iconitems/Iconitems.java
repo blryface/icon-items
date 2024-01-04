@@ -12,7 +12,6 @@ public class Iconitems implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
 		ModItems.registerModItems();
 	}
 }

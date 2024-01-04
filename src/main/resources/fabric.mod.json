@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"xyz.blurryface.iconitems.IconitemsClient"
+		],
+		"fabric-datagen": [
+			"xyz.blurryface.iconitems.datagen.IconitemsDataGen"
 		]
 	},
 	"mixins": [

@@ -9,66 +9,68 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import xyz.blurryface.iconitems.Iconitems;
+import xyz.blurryface.iconitems.lang.LanguageProvider;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModItems {
+    private static final List<Item> toAdd = new ArrayList<>();
 
     // items to register
-
-    public static final Item MODRINTH = registerItem("modrinth", new Item(new FabricItemSettings())); // modrinth ITEM
-    public static final Item CURSEFORGE = registerItem("curseforge", new Item(new FabricItemSettings())); // curseforge ITEM
-    public static final Item PRIDECRAFT = registerItem("pridecraft", new Item(new FabricItemSettings())); // pridecraft ITEM
-    public static final Item CRSS = registerItem("crss", new Item(new FabricItemSettings())); // crss ITEM
-    public static final Item DRSS = registerItem("drss", new Item(new FabricItemSettings())); // drss ITEM
-    public static final Item TCF = registerItem("tcf", new Item(new FabricItemSettings())); // tcf ITEM
-    public static final Item MINECRAFTJAVA = registerItem("minecraft_java", new Item(new FabricItemSettings())); // Java Minecraft ITEM
-    public static final Item MINECRAFTBEDROCK = registerItem("minecraft_bedrock", new Item(new FabricItemSettings())); // Bedrock Minecraft ITEM
-    public static final Item DEVINREAL = registerItem("devin", new Item(new FabricItemSettings())); // DEVIN ITEM
-    public static final Item MAYAREAL = registerItem("maya", new Item(new FabricItemSettings())); // MAYA ITEM
-    public static final Item GITHUB = registerItem("github", new Item(new FabricItemSettings())); //Github item
-    public static final Item ICONITEMS = registerItem("iconitems", new Item(new FabricItemSettings())); //MOD ICON item
-    public static final Item JADE = registerItem("jade", new Item(new FabricItemSettings())); //Bribe to get approved in modrinth faster :troll:
+    public static final Item MODRINTH = registerSimpleItem("modrinth", "Modrinth"); // modrinth ITEM
+    public static final Item CURSEFORGE = registerSimpleItem("curseforge", "Curseforge"); // curseforge ITEM
+    public static final Item PRIDECRAFT = registerSimpleItem("pridecraft", "Pridecraft"); // pridecraft ITEM
+    public static final Item CRSS = registerSimpleItem("crss", "Crss"); // crss ITEM
+    public static final Item DRSS = registerSimpleItem("drss", "Drss"); // drss ITEM
+    public static final Item TCF = registerSimpleItem("tcf", "Tcf"); // tcf ITEM
+    public static final Item MINECRAFTJAVA = registerSimpleItem("minecraft_java", "Minecraft: Java"); // Java Minecraft ITEM
+    public static final Item MINECRAFTBEDROCK = registerSimpleItem("minecraft_bedrock", "Minecraft: Bedrock"); // Bedrock Minecraft ITEM
+    public static final Item DEVINREAL = registerSimpleItem("devin", "Devin"); // DEVIN ITEM
+    public static final Item MAYAREAL = registerSimpleItem("maya", "Maya"); // MAYA ITEM
+    public static final Item GITHUB = registerSimpleItem("github", "Github"); //Github item
+    public static final Item ICONITEMS = registerSimpleItem("iconitems", "Icon Items"); //MOD ICON item
+    public static final Item JADE = registerSimpleItem("jade", "Jade"); //Bribe to get approved in modrinth faster :troll:
 
     //0.2 items
 
-    public static final Item PRISMLAUNCHER = registerItem("prismlauncher", new Item(new FabricItemSettings())); //prism logo item
-    public static final Item STEAM = registerItem("steam", new Item(new FabricItemSettings())); //Steam logo
-    public static final Item WHATSAPP = registerItem("whatsapp", new Item(new FabricItemSettings())); //Whatsapp logo
-    public static final Item WINDOWS11 = registerItem("windows11", new Item(new FabricItemSettings())); //win11 logo
-    public static final Item WINDOWS10 = registerItem("windows10", new Item(new FabricItemSettings())); //win10 logo
-    public static final Item LINUX = registerItem("linux", new Item(new FabricItemSettings())); //Tux
-    public static final Item MACOS = registerItem("macos", new Item(new FabricItemSettings())); //Latest macOS icon
+    public static final Item PRISMLAUNCHER = registerSimpleItem("prismlauncher", "Prism Launcher"); //prism logo item
+    public static final Item STEAM = registerSimpleItem("steam", "Steam"); //Steam logo
+    public static final Item WHATSAPP = registerSimpleItem("whatsapp", "WhatsApp"); //Whatsapp logo
+
+    //--- **WINDOWS** --- //
+    public static final Item WINDOWS11 = registerSimpleItem("windows11", "Windows 11"); //win11 logo
+    public static final Item WINDOWS10 = registerSimpleItem("windows10", "Windows 10"); //win10 logo
+    public static final Item WINDOWS_VISTA = registerSimpleItem("windows_vista", "Windows Vista");
+    public static final Item WINDOWS_XP = registerSimpleItem("windows_xp", "Windows XP");
+    public static final Item WINDOWS_NT = registerSimpleItem("windows_nt", "Windows NT");
+    //--- **WINDOWS** --- //
+
+    //--- **LINUX** --- //
+    public static final Item LINUX = registerSimpleItem("linux", "Linux"); //Tux
+    public static final Item ARCH_LINUX = registerSimpleItem("arch_linux", "Arch Linux");
+    public static final Item UBUNTU = registerSimpleItem("ubuntu", "Ubuntu");
+    public static final Item GARUDA = registerSimpleItem("garuda", "Garuda");
+    public static final Item ALPINE = registerSimpleItem("alpine", "Alpine Linux");
+    //--- **LINUX** --- //
+
+    public static final Item MACOS = registerSimpleItem("macos", "MacOS"); //Latest macOS icon
+
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {  //makes the item appear on the Creative Inventory
-
-        entries.add(MODRINTH);
-        entries.add(CURSEFORGE);
-        entries.add(PRIDECRAFT);
-        entries.add(CRSS);
-        entries.add(DRSS);
-        entries.add(TCF);
-        entries.add(MINECRAFTJAVA);
-        entries.add(MINECRAFTBEDROCK);
-        entries.add(DEVINREAL);
-        entries.add(MAYAREAL);
-        entries.add(GITHUB);
-        entries.add(ICONITEMS);
-        entries.add(JADE);
-
-        //0.2 items
-
-        entries.add(PRISMLAUNCHER);
-        entries.add(STEAM);
-        entries.add(WHATSAPP);
-        entries.add(WINDOWS11);
-        entries.add(WINDOWS10);
-        entries.add(LINUX);
-        entries.add(MACOS);
-
+        toAdd.forEach(entries::add);
     }
 
+    //For items that need no additional configuration
+    private static Item registerSimpleItem(String path, String englishName) {
+        return registerItem(path, englishName, new Item(new FabricItemSettings()));
+    }
 
     // thing that makes items register + log thing
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(Iconitems.MOD_ID, name), item);
+    private static Item registerItem(String path, String englishName, Item item) {
+        var registered = Registry.register(Registries.ITEM, new Identifier(Iconitems.MOD_ID, path), item);
+        toAdd.add(registered);
+        LanguageProvider.EN_US.addTranslation(registered.getTranslationKey(), englishName);
+        return registered;
     }
     public static void registerModItems() {
 
